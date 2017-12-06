@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -52,7 +51,6 @@ public class Locacao implements Serializable {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente; 
 	}
-	
 	public LocacaoPK getLocacaoPK() {
 		return locacaoPK;
 	}
@@ -65,5 +63,4 @@ public class Locacao implements Serializable {
 	public void setCarro(Set<Carro> carro) {
 		this.carros = carro;
 	}
-	
 }

@@ -22,28 +22,28 @@ public class Carro implements Serializable {
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	@Column(name="ID")
-	private int id;
+	private int idcarro;
 
 	@ManyToOne(fetch=FetchType.LAZY) 
 	@JoinColumns({@JoinColumn(name="NUMLOCACAO",referencedColumnName="NUMLOCACAO")})
 	private Locacao locacao;
 	
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	@Column(name="MODELO")
-	private String modelo;
-	
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	@Column(name="MARCA")
 	private String marca;
+	
+	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@Column(name="MODELO")
+	private String modelo;
 	
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	@Column(name="PLACA")
 	private String placa;
 
-	public int getId() { return id;
+	public int getId() { return idcarro;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int idcarro) {
+		this.idcarro = idcarro;
 	}
 	public Locacao getLocacao() {
 		return locacao;
@@ -69,9 +69,4 @@ public class Carro implements Serializable {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-	
-	
-	
-	
 }
-
